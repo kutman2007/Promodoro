@@ -1,0 +1,82 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #a09c9c;
+   
+  }
+  
+  li {
+  
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+
+  }
+
+  .completed2{
+    cursor: pointer;
+    border: none;
+
+  }
+  .completed2:hover{
+    color: #7d7979;
+  }
+  .Add {
+      position: relative;
+      top: 15px;
+      margin-left: 5px;
+      color: #fff;
+      font-size: 40px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px 0 10px;
+  }
+  .Add:hover{
+    border-radius: 0px 10px 0px 10px;
+    color: black;
+  }
+  hr{
+    border: none;
+    border-radius: 10px 0 10px;
+    box-shadow: 2px 1px 2px 1px;
+  }
+  .input[type="text"] {
+    margin-top: 50px;
+    padding: 5px;
+    width: 640px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50px 50px;
+    background-color: rgb(15, 11, 11);
+  }
+  
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #eaeaea;
+    border: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width:500px) {
+   .input[type="text"]{
+    padding: 0px;
+    font-size: 15px;
+    width: 310px;
+    margin-left: 80px;
+   }
+.Add{
+  font-size: 0px;
+  color: aqua;
+}
+li{
+  margin-left: 120px;
+  font-size: 25px;
+}
+  }
