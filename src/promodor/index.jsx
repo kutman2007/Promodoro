@@ -13,16 +13,16 @@ import TodoList from '../ещвщ/todo';
 const Pomodoro = () => {
 
   const [timer, setTimer] = useState(null); // Таймер
-  const [sessionLength, setSessionLength] = useState(25); // Длительность работы в минутах
-  const [breakLength, setBreakLength] = useState(5); // Длительность короткого перерыва в минутах
-  const [longBreakLength, setLongBreakLength] = useState(30); // Длительность длительного перерыва в минутах
+  const [session, setsession] = useState(25); // Длительность работы в минутах
+  const [breakl, setBreak] = useState(5); // Длительность короткого перерыва в минутах
+  const [long, setLong] = useState(30); // Длительность длительного перерыва в минутах
   const [isBreak, setIsBreak] = useState(false); // Флаг для определения, является ли текущий период перерывом
   const [isLongBreak, setIsLongBreak] = useState(false); // Флаг для определения, является ли текущий период длительным перерывом
-  const [time, setTime] = useState(sessionLength * 60);
-  const [showSettings, setShowSettings] = useState(false); // Флаг для отображения/скрытия настроек
+  const [time, setTime] = useState(session * 60);
+  const [setings, setsetings] = useState(false); // Флаг для отображения/скрытия настроек
 
   const toggleSettings = () => {
-    setShowSettings(!showSettings);
+    setsetings(!setings);
   };
 
   useEffect(() => {
@@ -35,20 +35,20 @@ const Pomodoro = () => {
 
         if (isLongBreak) {
           setIsLongBreak(false);
-          setTime(sessionLength * 60); // Время работы после длительного перерыва
+          setTime(session * 60); // Время работы после длительного перерыва
         } else {
-          setTime(breakLength * 60); // Время работы после короткого перерыва
+          setTime(breakl * 60); // Время работы после короткого перерыва
         }
       } else {
         setIsBreak(true);
-        setTime(longBreakLength * 60); // Время длительного перерыва
+        setTime(long * 60); // Время длительного перерыва
 
         if (time === 0) {
           setIsLongBreak(true);
         }
       }
     }
-  }, [time, isBreak, isLongBreak, sessionLength, breakLength, longBreakLength]);
+  }, [time, isBreak, isLongBreak, session, breakl, long]);
 
   const startTimer = () => {
     setTimer(setInterval(() => {
@@ -61,9 +61,9 @@ const Pomodoro = () => {
     setTimer(null);
   };
   const buh = () => {
-    setSessionLength(25);
-    setBreakLength(5);
-    setLongBreakLength(30);
+    setsession(25);
+    setBreak(5);
+    setLong(30);
   };
 
   const resetTimer = () => {
@@ -71,18 +71,18 @@ const Pomodoro = () => {
     setTimer(null);
     setIsBreak(false);
     setIsLongBreak(false);
-    setTime(sessionLength * 60);
+    setTime(session * 60);
   };
 
-  const handleBreakType = (isLong) => {
+  const Type = (isLong) => {
     if (isLong) {
       setIsBreak(true);
       setIsLongBreak(true);
-      setTime(longBreakLength * 60);
+      setTime(long * 60);
     } else {
       setIsBreak(true);
       setIsLongBreak(false);
-      setTime(breakLength * 60);
+      setTime(breakl * 60);
     }
   };
 
@@ -92,35 +92,33 @@ const Pomodoro = () => {
     return `${minutes}:${seconds}`;
   };
 
-  const incrementSessionLength = () => {
-    setSessionLength(prevLength => prevLength + 1);
+  const increment1 = () => {
+    setsession(prevLength => prevLength + 1);
   };
 
-  const decrementSessionLength = () => {
-    setSessionLength(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
+  const decrement1 = () => {
+    setsession(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
   };
 
-  const incrementBreakLength = () => {
-    setBreakLength(prevLength => prevLength + 1);
+  const increment2 = () => {
+    setBreak(prevLength => prevLength + 1);
   };
 
-  const decrementBreakLength = () => {
-    setBreakLength(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
+  const decrement2 = () => {
+    setBreak(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
   };
 
-  const incrementLongBreakLength = () => {
-    setLongBreakLength(prevLength => prevLength + 1);
+  const increment3 = () => {
+    setLong(prevLength => prevLength + 1);
   };
 
-  const decrementLongBreakLength = () => {
-    setLongBreakLength(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
+  const decrement3 = () => {
+    setLong(prevLength => (prevLength > 1 ? prevLength - 1 : prevLength));
   };
 
   return (
     <div className='timer-container '>
-
       <ul className='wrapper'>
-
         <li className="n facebook">
           <a href="https://www.facebook.com/kutman.orumbekov?mibextid=ZbWKwL">
             <FacebookIcon color="action" />
@@ -140,7 +138,6 @@ const Pomodoro = () => {
             <span class="tooltip">Github</span>
             <span><i class="fab fa-github"></i></span>
           </a>
-
         </li>
         <li class="n youtube">
           <a href="https://youtube.com/@dindon9617">
@@ -152,12 +149,8 @@ const Pomodoro = () => {
 
       </ul>
       <h1 className='animate__animated animate__bounce'>Pomodoro Timer</h1>
-
-
-
-      <div className={`settings-icon ${showSettings ? 'active' : ''}`} onClick={toggleSettings}>
-        {showSettings ? <CloseIcon sx={{ fontSize: 40 }} /> : <SettingsIcon sx={{ fontSize: 40 }} />}
-
+      <div className={`settings-icon ${setings ? 'active' : ''}`} onClick={toggleSettings}>
+        {setings ? <CloseIcon sx={{ fontSize: 40 }} /> : <SettingsIcon sx={{ fontSize: 40 }} />}
       </div>
       <div class="container">
         <div class="btn"><a href="#" onClick={startTimer}><PlayCircleFilledWhiteIcon sx={{ fontSize: 40 }} /></a></div>
@@ -168,47 +161,42 @@ const Pomodoro = () => {
         <a className='prom' href="https://worksection.com/blog/pomodoro_time_management.html">What  is Promodoro?</a>
       </li>
       <div className='block'>
-        {showSettings && (
+        {setings && (
           <div className="settings">
             <div className="setting-item">
               <label>Session Length:</label>
               <div className="length-control">
-                <button onClick={decrementSessionLength}>-</button>
-                <span>{sessionLength}</span>
-                <button onClick={incrementSessionLength}>+</button>
+                <button onClick={decrement1}>-</button>
+                <span>{session}</span>
+                <button onClick={increment1}>+</button>
               </div>
               <button className='asd' onClick={resetTimer}>Promodoro</button>
             </div>
             <div className="setting-item">
               <label>Break Length:</label>
               <div className="length-control">
-                <button onClick={decrementBreakLength}>-</button>
-                <span>{breakLength}</span>
-                <button onClick={incrementBreakLength}>+</button>
+                <button onClick={decrement2}>-</button>
+                <span>{breakl}</span>
+                <button onClick={increment2}>+</button>
               </div>
-              <button className='asd' onClick={() => handleBreakType(false)}>Short Break</button>
+              <button className='asd' onClick={() => Type(false)}>Short Break</button>
             </div>
             <div className="setting-item">
               <label>Long Break Length:</label>
               <div className="length-control">
-                <button onClick={decrementLongBreakLength}>-</button>
-                <span>{longBreakLength}</span>
-                <button onClick={incrementLongBreakLength}>+</button>
+                <button onClick={decrement3}>-</button>
+                <span>{long}</span>
+                <button onClick={increment3}>+</button>
               </div>
-              <button className='asd' onClick={() => handleBreakType(true)}>Long Break</button>
+              <button className='asd' onClick={() => Type(true)}>Long Break</button>
             </div>
             <button className="reset-button" onClick={buh}>Reset</button>
           </div>
         )}
-
         <h2>{isBreak ? (isLongBreak ? 'Long Break' : 'Break') : 'Work'}</h2>
-
-
         <h3>{formatTime(time)}</h3>
-
       </div>
       <TodoList />
-
     </div>
   );
 };

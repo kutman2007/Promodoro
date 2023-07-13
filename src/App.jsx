@@ -3,18 +3,18 @@ import RegistrationForm from './Register';
 import Pomodoro from './promodor';
   import './App.css'
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Флаг для отслеживания состояния входа пользователя
+  const [loggin, setloggin] = useState(false); // Флаг для отслеживания состояния входа пользователя
 
   const handleLogin = () => {
     // Ваш код для выполнения входа пользователя
-    setIsLoggedIn(true);
+    setloggin(true);
   };
 
 
   return (
     <div>
-      <Pomodoro />
-      {/* {isLoggedIn ? (
+      
+      {loggin ? (
         // Если пользователь вошел, показываем компонент Pomodoro
         <div>
           <Pomodoro />
@@ -22,7 +22,7 @@ const App = () => {
       ) : (
         // Если пользователь не вошел, показываем компонент RegistrationForm
         <RegistrationForm onLogin={handleLogin} />
-      )} */}
+      )}
     </div>
   );
 };

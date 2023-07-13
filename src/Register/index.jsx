@@ -5,15 +5,15 @@ const RegistrationForm = ({ onLogin }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleEmailChange = (e) => {
+  const Email = (e) => {
     setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
+  const Password = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const Sumpit = (e) => {
     e.preventDefault();
 
     if (!isValidEmail(email)) {
@@ -42,22 +42,19 @@ const RegistrationForm = ({ onLogin }) => {
 
   return (
     <div>
-    <form onSubmit={handleSubmit} className='login-box'>
-
+    <form onSubmit={Sumpit} className='login-box'>
       <h2>Login</h2>
       <div className='user-box'>
-        <input type="text" value={email} onChange={handleEmailChange} />
+        <input type="text" value={email} onChange={Email} />
         <label className='email'>Email:</label>
       </div>
       <div className='user-box'>
-        <input type="password" value={password} onChange={handlePasswordChange} />
+        <input type="password" value={password} onChange={Password} />
         <label>Password:</label>
       </div>
       {error && <div className="error">{error}</div>}
       <button className='btn1'>Register</button>
-      
     </form>
-   
     </div>
   );
 };
