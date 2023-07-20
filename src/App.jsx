@@ -12,7 +12,7 @@ const App = () => {
     <div> 
       {loggin ? (
         <div>
-         
+         <Pomodoro/>
         </div>
       ) : (
         <RegistrationForm onLogin={handleLogin} />
