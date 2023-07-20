@@ -183,7 +183,7 @@ const Pomodoro = () => {
             </div>
             <div className="setting-item">
               <label>Узак тыныгуу:</label>
-              <div className="length-control">
+              <div id='gr' className="length-control">
                 <button onClick={decrement3}>-</button>
                 <span>{long}</span>
                 <button onClick={increment3}>+</button>

@@ -6,9 +6,7 @@ ul {
     color: #a09c9c;
    
   }
-  #sad{
-    font-family: 'Rubik Mono One', sans-serif;
-  }
+
   li {
   
     display: flex;
@@ -51,6 +49,7 @@ ul {
     box-shadow: 2px 1px 2px 1px;
   }
   .input[type="text"] {
+    font-family: 'Rubik Mono One', sans-serif;
     margin-top: 50px;
     padding: 5px;
     width: 640px;
@@ -71,9 +70,11 @@ ul {
   @media screen and (max-width:500px) {
    .input[type="text"]{
     padding: 0px;
-    font-size: 15px;
+    font-size: 10px;
+    height: 20px;
     width: 310px;
     margin-left: 80px;
+
    }
 .Add{
   font-size: 0px;
@@ -81,6 +82,10 @@ ul {
 }
 li{
   margin-left: 120px;
-  font-size: 25px;
+  font-size: 10px;
+}
+#sad{
+  margin-top: 10px;
+  font-size: 13px;
 }
   }

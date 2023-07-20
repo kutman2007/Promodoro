@@ -28,7 +28,7 @@ function TodoList() {
   return (
     <div>
 
-      <input className='input' type="text" value={task} onChange={(e) => setTask(e.target.value)} placeholder="Enter task" />
+      <input className='input' type="text" value={task} onChange={(e) => setTask(e.target.value)} placeholder="Жазуу" />
       <ArrowDownwardIcon sx={{ fontSize: 40 }} className='Add' onClick={onclickadd} />
       <ul>
         {tasks.map((task, index) => (
