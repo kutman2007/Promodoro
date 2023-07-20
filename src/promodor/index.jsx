@@ -148,7 +148,7 @@ const Pomodoro = () => {
         </li>
 
       </ul>
-      <h1 className='animate__animated animate__bounce'>Pomodoro Timer</h1>
+      <h1 className='animate__animated animate__bounce'>Помодоро таймери</h1>
       <div className={`settings-icon ${setings ? 'active' : ''}`} onClick={toggleSettings}>
         {setings ? <CloseIcon sx={{ fontSize: 40 }} /> : <SettingsIcon sx={{ fontSize: 40 }} />}
       </div>
@@ -158,43 +158,43 @@ const Pomodoro = () => {
         <div class="btn"><a href="#" onClick={resetTimer} ><RestartAltIcon sx={{ fontSize: 40 }} /></a></div>
       </div>
       <li>
-        <a className='prom' href="https://worksection.com/blog/pomodoro_time_management.html">What  is Promodoro?</a>
+        <a className='prom' href="https://worksection.com/blog/pomodoro_time_management.html">Промодор деген эмне?</a>
       </li>
       <div className='block'>
         {setings && (
           <div className="settings">
             <div className="setting-item">
-              <label>Session Length:</label>
+              <label>Сеанстын узундугу:</label>
               <div className="length-control">
                 <button onClick={decrement1}>-</button>
                 <span>{session}</span>
                 <button onClick={increment1}>+</button>
               </div>
-              <button className='asd' onClick={resetTimer}>Promodoro</button>
+              <button className='asd' onClick={resetTimer}>ИШ</button>
             </div>
             <div className="setting-item">
-              <label>Break Length:</label>
+              <label>Тыныгуу:</label>
               <div className="length-control">
                 <button onClick={decrement2}>-</button>
                 <span>{breakl}</span>
                 <button onClick={increment2}>+</button>
               </div>
-              <button className='asd' onClick={() => Type(false)}>Short Break</button>
+              <button className='asd' onClick={() => Type(false)}>Тыныгуу</button>
             </div>
             <div className="setting-item">
-              <label>Long Break Length:</label>
+              <label>Узак тыныгуу:</label>
               <div className="length-control">
                 <button onClick={decrement3}>-</button>
                 <span>{long}</span>
                 <button onClick={increment3}>+</button>
               </div>
-              <button className='asd' onClick={() => Type(true)}>Long Break</button>
+              <button className='asd' onClick={() => Type(true)}>Узак тыныгуу</button>
             </div>
-            <button className="reset-button" onClick={buh}>Reset</button>
+            <button className="reset-button" onClick={buh}>Тазалоо</button>
           </div>
         )}
-        <h2>{isBreak ? (isLongBreak ? 'Long Break' : 'Break') : 'Work'}</h2>
-        <h3>{formatTime(time)}</h3>
+        <h2>{isBreak ? (isLongBreak ? 'Узак тыныгуу' : 'Тыныгуу') : 'ИШ'}</h2>
+        <h3> {formatTime(time)}</h3>
       </div>
       <TodoList />
     </div>

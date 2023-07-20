@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+
+
+
 * {
+
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 }
-/*
-    Auther: Abdelrhman Said
-*/
-
 .prom{
 	cursor: pointer;
 	position: absolute;
@@ -136,7 +138,7 @@ left: 0px;
 
 
   .title {
-	font-family: sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;
 	font-size: 18px;
 	margin-top: 8px;
 	user-select: none;
@@ -162,6 +164,7 @@ left: 0px;
   }
   
 body {
+	
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -170,12 +173,12 @@ body {
 }
 .asd{
 	cursor: pointer;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;
 	color: #000;
 	background-color: #00bfff;
 	border-radius: 10px 10px;
 	font-size: 20px;
-	width: 130px;
+	width: 150px;
 }
 .asd:hover{
 	color: #ededf2;
@@ -308,7 +311,7 @@ body {
 }
 .settings {
 	position: absolute;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;
 	top: 0;
 	left: 200;
 	width: 800px;
@@ -343,9 +346,10 @@ body {
 	margin-top: 25px;
 	margin-left: 20px;
    font-size: 35px;
+   font-family: 'Rubik Mono One', sans-serif;
 	width: 700px;
 	margin: 30px;
-	font-family: 'Orbitron', sans-serif;
+
 	margin-bottom: 15px;
   }
   
@@ -379,7 +383,7 @@ body {
   
   .reset-button {
 	cursor: pointer;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;
 	padding: 8px 12px;
 	background-color: #0d3ed3;
 	font-size: 40px;
@@ -416,23 +420,24 @@ body {
 	display: flex;
   }
   span{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Rubik Mono One', sans-serif;
 	color: #f6f6fa;
   }
   
   h1 {
+	font-family: 'Rubik Mono One', sans-serif;
 	text-align: center;
-	font-family: 'Orbitron', sans-serif;
-    font-size: 55px;
+    font-size: 45px;
 	padding: 80px;
     font-weight: bold;
   color:#fff;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+	margin-top: 20px;
 	--animate__heartBeat: 2s;
   }
   
   h2 {
-	font-family: 'Orbitron', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
     font-size: 48px;
     font-weight: bold;
 	color: #918585;
@@ -509,7 +514,7 @@ body {
 	}
 	h1 {
 		text-align: center;
-		font-family: 'Orbitron', sans-serif;
+		font-family: 'Rubik Mono One', sans-serif;
 		font-size: 35px;
 		padding: 40px;
 		margin-top: 230px;
@@ -530,15 +535,15 @@ body {
 	}
 	.reset-button{
 		cursor: pointer;
-		font-family: 'Orbitron', sans-serif;
+		font-family: 'Rubik Mono One', sans-serif;
 		padding: 8px 12px;
 		background-color: #0d3ed3;
-		font-size: 20px;
+		font-size: 15px;
 		text-align: center;
 		display: flex;
 		justify-content: center;
 		align-self: center;
-		margin-top: 10px;
+		margin-top: 0px;
 		color: #0e0d0d;
 		border: none;
 		border-radius: 10px 10px;
@@ -580,7 +585,7 @@ body {
 		top: 30px;
 	}
 	h2 {
-		font-family: 'Orbitron', sans-serif;
+		font-family: 'Rubik Mono One', sans-serif;
 		font-size: 48px;
 		font-weight: bold;
 		color: #918585;
@@ -594,12 +599,13 @@ body {
 		font-size: 15px;
 	}
 	.asd{
-		font-size: 15px;
+		font-size: 13px;
 	}
 	.prom:hover{
 		color: #0000ff;
 	}
    .settings{
+	font-family: 'Rubik Mono One', sans-serif;
 	width: 350px;
 	height: 240px;
 
@@ -616,6 +622,7 @@ body {
   }
 	
 	  .settings-icon{
+		font-family: 'Rubik Mono One', sans-serif;
 		position: absolute;
 		color: #fff;
 		cursor: pointer;
@@ -624,7 +631,12 @@ body {
 	  }
 
  } 
-  
-  
+  a{
+	font-family: 'Rubik Mono One', sans-serif;
+  }
+  label{
+	font-family: 'Rubik Mono One', sans-serif;
+	font-size: 20px;
+  }
   
   

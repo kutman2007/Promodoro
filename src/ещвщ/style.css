@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 ul {
     list-style-type: none;
     padding: 0;
     color: #a09c9c;
    
   }
-  
+  #sad{
+    font-family: 'Rubik Mono One', sans-serif;
+  }
   li {
   
     display: flex;

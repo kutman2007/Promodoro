@@ -34,13 +34,13 @@ function TodoList() {
         {tasks.map((task, index) => (
           <div>
 
-            <li key={index}>
+            <li className='dad' key={index}>
               {task.completed ? (
                 <AiFillCheckCircle className='completed' onClick={() => Complete(index)} />
               ) : (
                 <AiOutlineCloseCircle onClick={() => Complete(index)} />
               )}
-              <span className={task.completed ? 'completed' : ''}>{task.task}</span>
+              <span id='sad' className={task.completed ? 'completed' : ''}>{task.task}</span>
               <AiFillDelete className='completed2' onClick={() => Delete(index)} />
 
             </li>
