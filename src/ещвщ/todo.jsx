@@ -36,7 +36,7 @@ function TodoList() {
 
             <li className='dad' key={index}>
               {task.completed ? (
-                <AiFillCheckCircle className='completed' onClick={() => Complete(index)} />
+                <AiFillCheckCircle id='f' className='completed' onClick={() => Complete(index)} />
               ) : (
                 <AiOutlineCloseCircle onClick={() => Complete(index)} />
               )}

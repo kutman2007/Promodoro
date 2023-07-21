@@ -69,15 +69,12 @@ ul {
   }
   @media screen and (max-width:500px) {
     .completed2{
-      font-size: 13px;
+      font-size: 20px;
       cursor: pointer;
       border: none;
   
     }
-    .completed2:hover{
-      font-size: 13px;
-      color: #7d7979;
-    }
+  
    .input[type="text"]{
     padding: 0px;
     font-size: 10px;
@@ -92,7 +89,7 @@ ul {
 }
 li{
   margin-left: 120px;
-  font-size: 10px;
+  font-size: 20px;
 }
 #sad{
   margin-top: 10px;
