@@ -53,7 +53,13 @@ const RegistrationForm = ({ onLogin }) => {
         <label>Password:</label>
       </div>
       {error && <div className="error">{error}</div>}
-      <button className='btn1'>Register</button>
+        <a href="#" className="op">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Register
+        </a>
     </form>
     </div>
   );

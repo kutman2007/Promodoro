@@ -194,6 +194,9 @@ const Pomodoro = () => {
           </div>
         )}
         <h2>{isBreak ? (isLongBreak ? 'Узак тыныгуу' : 'Тыныгуу') : 'ИШ'}</h2>
+        <div className="progress-bar">
+          <div className="progress" style={{ width: `${(time / (session * 60)) * 100}%` }} />
+        </div>
         <h3> {formatTime(time)}</h3>
       </div>
       <TodoList />

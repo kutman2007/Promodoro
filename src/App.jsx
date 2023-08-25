@@ -10,14 +10,14 @@ const App = () => {
   };
   return (
     <div> 
-      {loggin ? (
+      {/* {loggin ? (
         <div>
          <Pomodoro/>
         </div>
       ) : (
         <RegistrationForm onLogin={handleLogin} />
-      )}
-          {/* <Pomodoro/> */}
+      )} */}
+          <Pomodoro/>
     </div>
   );
 };
