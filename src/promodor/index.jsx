@@ -12,14 +12,14 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TodoList from '../ещвщ/todo';
 const Pomodoro = () => {
 
-  const [timer, setTimer] = useState(null); // Таймер
-  const [session, setsession] = useState(25); // Длительность работы в минутах
-  const [breakl, setBreak] = useState(5); // Длительность короткого перерыва в минутах
-  const [long, setLong] = useState(30); // Длительность длительного перерыва в минутах
-  const [isBreak, setIsBreak] = useState(false); // Флаг для определения, является ли текущий период перерывом
-  const [isLongBreak, setIsLongBreak] = useState(false); // Флаг для определения, является ли текущий период длительным перерывом
+  const [timer, setTimer] = useState(null); 
+  const [session, setsession] = useState(25); 
+  const [breakl, setBreak] = useState(5); 
+  const [long, setLong] = useState(30); 
+  const [isBreak, setIsBreak] = useState(false); 
+  const [isLongBreak, setIsLongBreak] = useState(false); 
   const [time, setTime] = useState(session * 60);
-  const [setings, setsetings] = useState(false); // Флаг для отображения/скрытия настроек
+  const [setings, setsetings] = useState(false); 
 
   const toggleSettings = () => {
     setsetings(!setings);
@@ -35,13 +35,13 @@ const Pomodoro = () => {
 
         if (isLongBreak) {
           setIsLongBreak(false);
-          setTime(session * 60); // Время работы после длительного перерыва
+          setTime(session * 60); 
         } else {
-          setTime(breakl * 60); // Время работы после короткого перерыва
+          setTime(breakl * 60); 
         }
       } else {
         setIsBreak(true);
-        setTime(long * 60); // Время длительного перерыва
+        setTime(long * 60); 
 
         if (time === 0) {
           setIsLongBreak(true);

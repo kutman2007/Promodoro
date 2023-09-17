@@ -531,14 +531,14 @@ font-family: 'Rubik Mono One', sans-serif;
 		justify-content: center;
 		align-items: center;
 		margin-left: 30px;
-		top: 170px;
+		top: 50px;
 	}
 	h1 {
 		text-align: center;
 		font-family: 'Rubik Mono One', sans-serif;
 		font-size: 35px;
 		padding: 40px;
-		margin-top: 230px;
+		margin-top: 170px;
 		font-weight: bold;
 	  color:#fff;
 		margin-bottom: 10px;
@@ -576,17 +576,19 @@ font-family: 'Rubik Mono One', sans-serif;
 	   font-size: 15px;
 	   margin: 5px;
 	   margin-top: 15px;
-		 margin-left: 10px;
+		 margin-left:	10px;
+	  }
+	  .container{
+		display: grid;
+		grid-template-columns: 1fr;
 	  }
 	.container .btn {
 		position: relative;
-		width: 105px;
+		width: 305px;
 		height: 50px;
-		margin: 0;
-		margin-left: -130px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		margin: 12px;
+		margin-left: -50px;
+	 
 	}
 	h3 {
 		font-family: 'Orbitron', sans-serif;
@@ -613,9 +615,8 @@ font-family: 'Rubik Mono One', sans-serif;
 	  }
 	  .prom{
 		cursor: pointer;
-	
 		left: 50px;
-		top: 140px;
+		top: 20px;
 		color: #00ffd0;
 		font-size: 10px;
 		
@@ -651,8 +652,8 @@ font-family: 'Rubik Mono One', sans-serif;
 		position: absolute;
 		color: #fff;
 		cursor: pointer;
-		left: 390px;
-		top:450px;
+		left: 310px;
+		top:480px;
 	  }
 	  label{
 		font-size: 13px;
