@@ -538,7 +538,7 @@ font-family: 'Rubik Mono One', sans-serif;
 		font-family: 'Rubik Mono One', sans-serif;
 		font-size: 35px;
 		padding: 40px;
-		margin-top: 170px;
+		margin-top: 220px;
 		font-weight: bold;
 	  color:#fff;
 		margin-bottom: 10px;
@@ -652,8 +652,8 @@ font-family: 'Rubik Mono One', sans-serif;
 		position: absolute;
 		color: #fff;
 		cursor: pointer;
-		left: 310px;
-		top:480px;
+		left: 300px;
+		top:490px;
 	  }
 	  label{
 		font-size: 13px;
