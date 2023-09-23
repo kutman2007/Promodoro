@@ -12,14 +12,14 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TodoList from '../ещвщ/todo';
 const Pomodoro = () => {
 
-  const [timer, setTimer] = useState(null); 
-  const [session, setsession] = useState(25); 
-  const [breakl, setBreak] = useState(5); 
-  const [long, setLong] = useState(30); 
-  const [isBreak, setIsBreak] = useState(false); 
-  const [isLongBreak, setIsLongBreak] = useState(false); 
+  const [timer, setTimer] = useState(null);
+  const [session, setsession] = useState(25);
+  const [breakl, setBreak] = useState(5);
+  const [long, setLong] = useState(30);
+  const [isBreak, setIsBreak] = useState(false);
+  const [isLongBreak, setIsLongBreak] = useState(false);
   const [time, setTime] = useState(session * 60);
-  const [setings, setsetings] = useState(false); 
+  const [setings, setsetings] = useState(false);
 
   const toggleSettings = () => {
     setsetings(!setings);
@@ -35,13 +35,13 @@ const Pomodoro = () => {
 
         if (isLongBreak) {
           setIsLongBreak(false);
-          setTime(session * 60); 
+          setTime(session * 60);
         } else {
-          setTime(breakl * 60); 
+          setTime(breakl * 60);
         }
       } else {
         setIsBreak(true);
-        setTime(long * 60); 
+        setTime(long * 60);
 
         if (time === 0) {
           setIsLongBreak(true);
@@ -188,17 +188,16 @@ const Pomodoro = () => {
                 <span>{long}</span>
                 <button onClick={increment3}>+</button>
               </div>
-              <button className='asd' onClick={() => Type(true)}>Узак тыныгуу</button>
+              <button className='asd'onClick={() => Type(true)}>Узак тыныгуу</button>
             </div>
             <button className="reset-button" onClick={buh}>Тазалоо</button>
           </div>
         )}
         <h2>{isBreak ? (isLongBreak ? 'Узак тыныгуу' : 'Тыныгуу') : 'ИШ'}</h2>
-        <div className="progress-bar">
-          <div className="progress" style={{ width: `${(time / (session * 60)) * 100}%` }} />
-        </div>
+
         <h3> {formatTime(time)}</h3>
       </div>
+    
       <TodoList />
     </div>
   );
